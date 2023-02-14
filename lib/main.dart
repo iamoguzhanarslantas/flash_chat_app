@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'screens/screens.dart';
+
 void main() {
   runApp(
     const FlashChat(),
@@ -14,7 +15,11 @@ class FlashChat extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        textTheme: const TextTheme(),
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(
+            color: Colors.black,
+          ),
+        ),
       ),
       initialRoute: WelcomeScreen.id,
       routes: {
